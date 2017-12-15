@@ -16,4 +16,21 @@ func main() {
 	fmt.Println(true && false)
 	fmt.Println(true || false)
 	fmt.Println(!true)
+
+	//变量
+	var str = "gogorun"
+	fmt.Println(str)
+
+	var b, c int = 1, 2
+	fmt.Println("b+c=", b+c)
+
+	var testInt int
+	fmt.Println(testInt)
+
+	//简洁声明初始化
+	test := 123
+	fmt.Println(test)
+
+	//常量
+
 }
