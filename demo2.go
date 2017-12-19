@@ -2,6 +2,11 @@ package main
 
 import "fmt"
 
+//多返回值
+func getVals() (int, int) {
+	return 3, 8
+}
+
 func main() {
 	//slice 切片
 	s := make([]string, 3)
@@ -58,4 +63,28 @@ func main() {
 
 	a_map := map[string]int{"k1": 11, "k2": 222, "k3": 333}
 	fmt.Println("a_map:", a_map)
+
+	//range
+	for key, val := range a_map {
+		fmt.Printf("%s -> %d\n", key, val)
+	}
+
+	for _, v := range a_map {
+		fmt.Println("list:", v)
+	}
+
+	for k, v := range a_map {
+		if v == 222 {
+			fmt.Println("kk:", k)
+		}
+	}
+
+	//多返回值
+	a, b := getVals()
+	fmt.Println("a:", a)
+	fmt.Println("b:", b)
+
+	_, c := getVals()
+	fmt.Println("c:", c)
+
 }
